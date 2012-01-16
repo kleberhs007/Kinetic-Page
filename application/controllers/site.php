@@ -6,7 +6,17 @@ class Site extends CI_Controller
     public function index()
         {
             $this->_view->titulo = 'Kaidou';
-            $this->load->view('index_view',$this->_view);
+            
+            $dados = array
+            (
+                'titulo' => $this->_view->titulo,
+                'menu' => $this->load->view('menu_lateral_view'),
+                'noticias' => $this->load->view('index_view')
+                
+            );
+            
+            //var_dump($dados);exit;
+            $this->load->view('conteudo_view',$dados);
         }
         
     public function noticias()
@@ -15,9 +25,10 @@ class Site extends CI_Controller
             
             $dados = array
             (
-            'titulo' => $this->_view->titulo,
-            'menu' => $this->load->view('menu_lateral_view'),
-            'noticias' => $this->load->view('noticias_view')
+                'titulo' => $this->_view->titulo,
+                'menu' => $this->load->view('menu_lateral_view'),
+                'noticias' => $this->load->view('noticias_view')
+                
             );
             
             //var_dump($dados);exit;
