@@ -21,7 +21,7 @@ class Site extends CI_Controller
         
     public function noticias()
         {
-            $this->_view->titulo = 'NotÌcias';
+            $this->_view->titulo = 'Not√≠cias';
             
             $dados = array
             (
