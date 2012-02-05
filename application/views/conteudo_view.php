@@ -16,7 +16,7 @@
 
     <div id="tela">
         <?php echo $menu; ?>
-        <?php echo $noticias; ?>
+        <?php echo $conteudo; ?>
     </div>
 
 </body>

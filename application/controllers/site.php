@@ -11,7 +11,7 @@ class Site extends CI_Controller
             (
                 'titulo' => $this->_view->titulo,
                 'menu' => $this->load->view('menu_lateral_view'),
-                'noticias' => $this->load->view('index_view')
+                'conteudo' => $this->load->view('index_view')
                 
             );
             
@@ -27,7 +27,7 @@ class Site extends CI_Controller
             (
                 'titulo' => $this->_view->titulo,
                 'menu' => $this->load->view('menu_lateral_view'),
-                'noticias' => $this->load->view('noticias_view')
+                'conteudo' => $this->load->view('noticias_view')
                 
             );
             
@@ -35,5 +35,39 @@ class Site extends CI_Controller
             $this->load->view('conteudo_view',$dados);
             
         }
+        
+        public function sobre()
+        {
+            $this->_view->titulo = 'Quem somos';
+            
+            $dados = array
+            (
+                'titulo' => $this->_view->titulo,
+                'menu' => $this->load->view('menu_lateral_view'),
+                'conteudo' => $this->load->view('sobre_view')
+                
+            );
+            
+            //var_dump($dados);exit;
+            $this->load->view('conteudo_view',$dados);
+            
+        }   
+        
+        public function contato()
+        {
+            $this->_view->titulo = 'Quem somos';
+            
+            $dados = array
+            (
+                'titulo' => $this->_view->titulo,
+                'menu' => $this->load->view('menu_lateral_view'),
+                'conteudo' => $this->load->view('contato_view')
+                
+            );
+            
+            //var_dump($dados);exit;
+            $this->load->view('conteudo_view',$dados);
+            
+        }     
 }
 ?>

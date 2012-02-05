@@ -1,3 +1,3 @@
 <div id="container">
-Olá mundo !
+Sejam bem vindos à página da Kaidou.
 </div>
